@@ -1,0 +1,116 @@
+/* style.css */ body { background-color: #121212; color: white; font-family: sans-serif; min-height: 100vh; position: relative; margin: 0; padding: 0; }
+
+.background-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.1; pointer-events: none; user-select: none; z-index: 0; }
+
+.header { background-color: #27ae60; display: flex; justify-content: space-between; align-items: center; padding: 1rem 4rem; position: relative; z-index: 10; }
+
+.header h1 { font-weight: bold; font-size: 1.25rem; }
+
+.signin-btn { background-color: black; color: white; padding: 0.25rem 1rem; font-size: 0.875rem; border: none; cursor: pointer; }
+
+.main { margin-top: 4rem; padding: 0 1rem; display: flex; flex-direction: column; align-items: center; z-index: 10; flex-grow: 1; }
+
+.hero-section { margin-top: 3rem; max-width: 64rem; width: 100%; text-align: center; }
+
+.hero-section h2 { font-size: 2.5rem; margin-bottom: 0.5rem; line-height: 1.2; font-weight: bold; }
+
+.hero-section p { font-size: 1.125rem; margin-bottom: 1.5rem; }
+
+.email-form { display: flex; justify-content: center; max-width: 32rem; margin: 0 auto; }
+
+.email-form input { padding: 0.5rem 1rem; font-size: 1rem; color: black; }
+
+.email-form button { background-color: #27ae60; color: white; padding: 0.5rem 1.5rem; font-size: 1rem; margin-left: 0.25rem; cursor: pointer; }
+
+.trending, .more-books { margin-top: 6rem; width: 100%; max-width: 64rem; padding: 0 4rem; }
+
+.trending h3, .more-books h3 { font-weight: bold; margin-bottom: 1.5rem; font-size: 1rem; }
+
+.scroll-container { display: flex; gap: 3rem; overflow-x: auto; padding-bottom: 1rem; }
+
+.scroll-container img, .grid-container img { height: 160px; width: 100%; object-fit: cover; border-radius: 0.5rem; cursor: pointer; }
+
+.grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 2rem; }
+
+.modal { display: none; position: fixed; z-index: 50; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; }
+
+.modal-content { max-width: 90%; max-height: 90%; border-radius: 0.5rem; box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); }
+
+.modal.show { display: flex; }
+
+.info-section { max-width: 48rem; margin: 0 auto; padding: 3rem 1rem; }
+
+.info-section h2 { font-weight: bold; font-size: 1.125rem; margin-bottom: 1rem; }
+
+.info-section ul { list-style-type: disc; padding-left: 1.25rem; font-size: 0.875rem; line-height: 1.6; }
+
+.info-section p { font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.5rem; }
+
+.footer { background-color: #121212; text-align: center; padding: 1.5rem 0; border-top: 1px solid #333; }
+
+.footer p { font-size: 0.75rem; color: #ccc; margin-bottom: 0.5rem; }
+
+.social-links { display: flex; justify-content: center; gap: 1.5rem; font-size: 1.5rem; }
+
+.social-links a { color: white; transition: color 0.3s ease; }
+
+.social-links a:hover { color: #999; }
+
+/* Contact Us Section */
+.contact-form-section {
+  background-color: #1f1f1f;
+  padding: 3rem 1rem;
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+}
+
+.contact-form-section h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  background-color: #333;
+  box-shadow: 0 0 0 2px #27ae60;
+}
+
+.contact-form button {
+  background-color: #27ae60;
+  color: #fff;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #219653;
+}
