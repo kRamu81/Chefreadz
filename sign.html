@@ -368,28 +368,33 @@
     </div>
    </section>
   </main>
+  
   <script>
-   // Toggle mobile menu
-   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-   const mobileMenu = document.getElementById('mobileMenu');
-   mobileMenuBtn.addEventListener('click', () => {
+  // Toggle mobile menu
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
-   });
+  });
 
-   // Sections
-   const ebooksSection = document.getElementById('ebooksSection');
-   const codeSheetsSection = document.getElementById('codeSheetsSection');
+  // Sections
+  const ebooksSection = document.getElementById('ebooksSection');
+  const codeSheetsSection = document.getElementById('codeSheetsSection');
 
-   // Desktop buttons
-   const showEbooksBtn = document.getElementById('showEbooksBtn');
-   const showCodeSheetsBtn = document.getElementById('showCodeSheetsBtn');
+  // Desktop buttons
+  const showEbooksBtn = document.getElementById('showEbooksBtn');
+  const showCodeSheetsBtn = document.getElementById('showCodeSheetsBtn');
 
-   showEbooksBtn.addEventListener('click', () => {
+  showEbooksBtn.addEventListener('click', () => {
     ebooksSection.classList.remove('hidden');
     codeSheetsSection.classList.add('hidden');
-   });
+  });
 
-   showCodeSheetsBtn.addEventListener('click', () => {
+  showCodeSheetsBtn.addEventListener('click', () => {
     ebooksSection.classList.add('hidden');
     codeSheetsSection.classList.remove('hidden');
- 
+  });
+</script>
+</body>
+</html>
