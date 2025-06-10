@@ -369,7 +369,7 @@
    </section>
   </main>
   
-  <script>
+ <script>
   // Toggle mobile menu
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -381,19 +381,29 @@
   // Sections
   const ebooksSection = document.getElementById('ebooksSection');
   const codeSheetsSection = document.getElementById('codeSheetsSection');
+  const roadmapsSection = document.getElementById('roadmapsSection'); // NEW
 
   // Desktop buttons
   const showEbooksBtn = document.getElementById('showEbooksBtn');
   const showCodeSheetsBtn = document.getElementById('showCodeSheetsBtn');
+  const showRoadmapsBtn = document.getElementById('showRoadmapsBtn'); // NEW
 
   showEbooksBtn.addEventListener('click', () => {
     ebooksSection.classList.remove('hidden');
     codeSheetsSection.classList.add('hidden');
+    roadmapsSection.classList.add('hidden'); // NEW
   });
 
   showCodeSheetsBtn.addEventListener('click', () => {
     ebooksSection.classList.add('hidden');
     codeSheetsSection.classList.remove('hidden');
+    roadmapsSection.classList.add('hidden'); // NEW
+  });
+
+  showRoadmapsBtn.addEventListener('click', () => {
+    ebooksSection.classList.add('hidden');
+    codeSheetsSection.classList.add('hidden');
+    roadmapsSection.classList.remove('hidden'); // NEW
   });
 </script>
 </body>
