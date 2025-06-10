@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="en">
+ <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChefReadz</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+ </head>
+ <body>
+  <img class="background-img" src="https://storage.googleapis.com/a1aa/image/10b6360f-e2db-4db9-e17d-aa172f6204ec.jpg" alt="Background" />  <header class="header">
+    <h1>ChefReadz</h1>
+    <a href="../FSd1/signin.html">
+      <button class="signin-btn">Sign In</button>
+    </a>
+  </header>  <main class="main">
+    <section class="hero-section">
+      <h2>Ultimate eBook,<br />Roadmaps and more</h2>
+      <p>Start learning for free</p>
+      <form class="email-form" method="POST" action="#">
+        <input type="email" placeholder="Enter your email to get started" required />
+        <button type="submit">Get Started</button>
+      </form>
+    </section><section class="trending">
+  <h3>Trending Now</h3>
+  <div class="scroll-container">
+    <img src="../FSd1/assests/book1.jpg" alt="Python eBook" class="zoomable" />
+    <img src="../FSd1/assests/book4.jpg" alt="MongoDB eBook" class="zoomable" />
+    <img src="../FSd1/assests/book2.jpg" alt="React eBook" class="zoomable" />
+  </div>
+</section>
+
+<section class="more-books">
+  <h3 class="text-center">More eBooks to Explore</h3>
+  <div class="grid-container">
+    <img src="../FSd1/assests/book3.jpg" alt="Advanced JavaScript Guide" class="zoomable" />
+    <img src="../FSd1/assests/book5.jpg" alt="CSS Mastery" class="zoomable" />
+    <img src="../FSd1/assests/book6.jpg" alt="HTML5 Essentials" class="zoomable" />
+    <img src="../FSd1/assests/book8.jpg" alt="SQL for Beginners" class="zoomable" />
+  </div>
+</section>
+
+  </main>  <!-- Modal -->  <div id="imgModal" class="modal" role="dialog" aria-modal="true" tabindex="-1">
+    <img id="modalImg" class="modal-content" alt="Zoomed eBook cover" />
+  </div>  <div class="info-section">
+    <section class="mb-12">
+      <h2>More Reasons to Join</h2>
+      <ul>
+        <li>Enjoy reading for easy download</li>
+        <li>View offline</li>
+        <li>Read anywhere</li>
+        <li>Access exclusive content and recipes</li>
+        <li>Get personalized recommendations</li>
+        <li>Join a community of food lovers and learners</li>
+      </ul>
+    </section><section>
+  <h2>Frequently Asked Questions</h2>
+  <div>
+    <p class="font-semibold">What is ChefReadz?</p>
+    <p>ChefReadz combines the culinary theme of "Chef" with "Readz," suggesting a platform that serves up educational content like eBooks and cheatsheets for students.</p>
+  </div>
+  <div>
+    <p class="font-semibold">How do I download content?</p>
+    <p>Simply sign up and browse the library. Click the download button on any eBook or cheatsheet to save it for offline reading.</p>
+  </div>
+  <div>
+    <p class="font-semibold">Can I access content offline?</p>
+    <p>Yes, once downloaded, you can access your content anytime without an internet connection.</p>
+  </div>
+  <div>
+    <p class="font-semibold">Is there a community I can join?</p>
+    <p>Absolutely! Join our forums and social media groups to connect with fellow food enthusiasts and learners.</p>
+  </div>
+</section>
+
+  </div>  <!-- Contact Form -->  <section class="contact-form-section">
+    <h2 class="text-center">Contact Us</h2>
+    <form class="contact-form" action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="subject" placeholder="Subject" required />
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>  <footer class="footer">
+    <p>Have a question? Call us at: 9392832943</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/kanamramu581" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/kRamu81" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/im_kramu?igsh=MWJiNWVvbjZoYXFoeA==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>  <script>
+    const modal = document.getElementById('imgModal');
+    const modalImg = document.getElementById('modalImg');
+    const zoomableImages = document.querySelectorAll('.zoomable');
+
+    zoomableImages.forEach(img => {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    modal.addEventListener('click', () => {
+      modal.classList.remove('show');
+      document.body.style.overflow = '';
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.classList.contains('show')) {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+      }
+    });
+  </script> </body>
+</html>
